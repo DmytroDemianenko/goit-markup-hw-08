@@ -41,4 +41,8 @@
   padding-top: 0;
   position: relative;
   z-index: 1;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }

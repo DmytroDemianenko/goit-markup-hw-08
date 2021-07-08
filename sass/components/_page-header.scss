@@ -1,7 +1,8 @@
 .container--head {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // margin-bottom: 0;
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -20,8 +21,8 @@
   }
   &__link {
     text-decoration: none;
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0.02em;
