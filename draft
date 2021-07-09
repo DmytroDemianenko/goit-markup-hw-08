@@ -36,18 +36,7 @@
     </header>
        
        
-        <!--MAIN CONTENT-->
-        <section class="section section--main">
-            <div class="container container--hero">
-                <!--Hero-->
-                <!-- <div class="hero-title"> -->
-                <h1 class="main--title">эффективные решения для вашего бизнеса</h1>
-                <!-- </div> -->
-                <div class="hero-button">
-                    <button class="button-order" data-modal-open type="button">Заказать услугу</button>
-                        
-                </div>
-            </div>
+        
         
 
         
@@ -100,6 +89,8 @@
         </ul>
         </div>
         </section>
+
+        
         <footer class="footer">
         <div class="container container--foot">
             <div class="foot__width">
