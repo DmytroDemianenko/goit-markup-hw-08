@@ -1,36 +1,189 @@
-.container--head {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // margin-bottom: 0;
-}
 .header {
   border-bottom: 1px solid #ececec;
 }
-
+.link {
+  text-decoration: none;
+}
+.container--head {
+  position: relative;
+  display: flex;
+  margin-bottom: 0;
+  min-width: 320px;
+}
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #000000;
+  &:hover,
+  &:focus {
+    color: var(--active-color);
+    fill: currentColor;
+  }
+  @media (min-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--white-color);
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transformX 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.mobile-menu-list {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  &__link {
+    display: inline-block;
+    color: #000000;
+    // padding-bottom: 16px;
+    // padding-top: 16px;
+  }
+  & > li:not(:last-child) {
+    padding-bottom: 32px;
+  }
+}
+.mobile-menu-bottom {
+  position: absolute;
+  bottom: 48px;
+}
+.mobile-menu-contacts {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  &__link {
+    display: inline-block;
+    color: var(--text-color);
+    padding-bottom: 32px;
+  }
+}
+.mobile-menu-social {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  &__link {
+    color: var(--active-color);
+    position: relative;
+    color: var(--active-color);
+  }
+  & > li:not(:last-child) {
+    padding-right: 20px;
+  }
+  // & > li:not(:last-child)::after {
+  //   padding-right: 20px;
+  //   // position: absolute;
+  //   content: " ";
+  //   left: 0;
+  //   // bottom: -1px;
+  //   display: block;
+  //   width: 22px;
+  //   height: 1px;
+  //   border-radius: 2px;
+  //   background-color: rgba(33, 33, 33, 0.2);
+  // }
+}
 .contacts {
   line-height: 1.14em;
   display: inline-flex;
+  flex-direction: column;
   margin-left: auto;
   &__icon {
     fill: currentColor;
     margin-right: 10px;
+    @media screen and (min-width: 768px) {
+      &--email {
+        width: 14px;
+        height: 10px;
+      }
+      &--tel {
+        width: 10px;
+        height: 14px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      &--email {
+        width: 16px;
+        height: 12px;
+      }
+      &--tel {
+        width: 10px;
+        height: 16px;
+      }
+    }
   }
-  & > li:not(:last-child) {
-    margin-right: 50px;
+
+  @media screen and (min-width: 768px) {
+    & {
+      margin-left: 84px;
+    }
   }
+  @media screen and (min-width: 1200px) {
+    & > li:not(:last-child) {
+      margin-right: 50px;
+    }
+    & {
+      flex-direction: row;
+      margin-left: 285px;
+    }
+  }
+
   &__link {
+    display: inline-flex;
     text-decoration: none;
-    // display: flex;
-    // flex-direction: row;
     font-style: normal;
+    font-size: 12px;
+    line-height: 1.17;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: inherit;
-    padding-top: 32px;
-    padding-bottom: 32px;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      &--email {
+        padding-top: 21px;
+        padding-bottom: 5px;
+      }
+      &--tel {
+        padding-bottom: 21px;
+        padding-top: 5px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      flex-direction: row;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
     &:hover,
     &:focus {
       color: var(--active-color);

@@ -22,7 +22,6 @@
     }
     @media screen and (min-width: 1200px) {
       flex-basis: calc(100% / 4 - 30px);
-      margin-left: 30px;
     }
   }
 }
@@ -50,7 +49,6 @@
   line-height: 1.17em;
   letter-spacing: 0.03em;
   text-align: center;
-  // width: auto;
   border: none;
 }
 .heading--teams {
