@@ -13,18 +13,18 @@
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
 }
-.products > .products__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+
+.products__item:not(:last-child) {
+  margin-bottom: 30px;
 }
+
 .products__link {
+  text-decoration: none;
   display: inline-block;
   box-shadow: none;
   border: none;
+  width: 100%;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -37,8 +37,11 @@
   font-size: 16px;
   line-height: 1.88;
   margin-top: 4px;
+  text-decoration: none;
 }
 .products__content {
+  text-decoration: none;
+  color: var(--text-color);
   padding: 20px 24px;
   border-right: 1px solid var(--card-content-bc);
   border-bottom: 1px solid var(--card-content-bc);
@@ -51,6 +54,7 @@
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  color: currentColor;
 }
 
 .products__thumb {
@@ -83,14 +87,48 @@
   opacity: 1;
   transform: translateY(0);
 }
+// @media screen and (min-width: 768px) and (max-width: 1199) {
+// }
+@media screen and (min-width: 768px) {
+  .products__item:nth-child(2n) {
+    margin-left: 30px;
+  }
+
+  .products__item {
+    flex-direction: row;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  .products__link {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
+  .products__item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  .products__link {
+    width: 370px;
+  }
+}
 /* PORTFOLIO BUTTON */
 .button-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: 34px;
-  justify-content: center;
+  margin-bottom: 25px;
   &__item:not(:last-child) {
     margin-right: 8px;
+  }
+  &__item {
+    margin-bottom: 15px;
   }
 }
 .button {
@@ -123,5 +161,14 @@
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .button-list {
+    margin-bottom: 34px;
+    justify-content: center;
+  }
+  .button-list__item {
+    margin-bottom: 0;
   }
 }

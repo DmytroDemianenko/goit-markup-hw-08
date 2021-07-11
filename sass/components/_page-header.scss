@@ -5,10 +5,10 @@
   text-decoration: none;
 }
 .container--head {
+  min-width: 320px;
   position: relative;
   display: flex;
   margin-bottom: 0;
-  min-width: 320px;
 }
 .menu-toggle {
   position: absolute;
@@ -46,7 +46,7 @@
   height: 100vh;
   padding: 48px 40px;
   z-index: 2000;
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transformX 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-container.is-open {
@@ -66,6 +66,9 @@
   & > li:not(:last-child) {
     padding-bottom: 32px;
   }
+}
+.mobile-menu--current {
+  color: var(--active-color);
 }
 .mobile-menu-bottom {
   position: absolute;
