@@ -90,11 +90,15 @@
 // @media screen and (min-width: 768px) and (max-width: 1199) {
 // }
 @media screen and (min-width: 768px) {
+  .products {
+    display: flex;
+    justify-content: flex-start;
+  }
   .products__item:nth-child(2n) {
     margin-left: 30px;
   }
 
-  .products__item {
+  .products__item:not(:last-child) {
     flex-direction: row;
     flex-basis: calc(100% / 2 - 30px);
   }
