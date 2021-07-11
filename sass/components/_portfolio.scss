@@ -89,7 +89,7 @@
 }
 // @media screen and (min-width: 768px) and (max-width: 1199) {
 // }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .products {
     display: flex;
     justify-content: flex-start;
@@ -110,7 +110,7 @@
   .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: calc(-1 * var(--card-set-gap));
   }
   .products__item {
