@@ -1132,8 +1132,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 24px;
 }
 
 .card__text {
@@ -1142,6 +1140,7 @@ img {
 
 .card__name {
   font-weight: 500;
+  margin-top: 30px;
 }
 
 .team > .team__item {
@@ -1174,6 +1173,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .social__link {
@@ -1272,7 +1272,7 @@ img {
       flex-wrap: wrap;
   width: 100%;
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   -ms-flex-preferred-size: calc((100% - 60px) / 2);
       flex-basis: calc((100% - 60px) / 2);
 }
@@ -1540,7 +1540,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 60px 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
